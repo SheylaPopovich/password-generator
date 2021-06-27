@@ -1,0 +1,123 @@
+/* Universal Selector */
+* {
+  margin:0;
+  padding:0;  
+}
+
+/* Element Selectors */
+body {
+  position: relative;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  color: #4F4846;
+}
+
+h1 {
+  font-weight: boulder;
+  color:rgb(6, 6, 34);
+}
+
+h2 {
+  margin: 20px;
+}
+
+main {
+  padding: 60px 0;
+}
+
+#picture {
+  width: 300px;px;
+  height: 500px;
+  border-radius:30px;
+}
+
+li {
+  display: inline;
+  padding: 20px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FDF8F5;
+}
+
+header,
+footer {
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  background-color: rgb(3, 3, 31);
+}
+
+header {
+  position: fixed;
+  border-bottom: 10px solid #ffffff;
+}
+
+footer {
+  position: absolute;
+  margin-top: 0;
+  bottom: 0;
+  border-bottom: 10px solid #4F4846;
+  color: #FDF8F5;    
+}
+
+figure {
+  margin-bottom: 40px;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+}
+
+section {
+  margin-bottom: 0;
+  padding: 20px 10px 40px 10px;
+  border-top: 3px solid #040213;
+  background-color:  #03023b;
+}
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px;
+  border: 5px solid #fffefe;
+  border-radius: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+  
+input, 
+textarea {
+  box-sizing: border-box;
+  width: 300px;
+  border: 1px solid #3f3e3d;
+}
+
+textarea {
+  vertical-align: top;
+  height: 60px;
+}
+  
+button {
+  height: 40px;
+  width: 120px;
+  background-color: #6e7792;
+  color: #FDF8F5;
+}
+ 
+/* Class Selectors */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
