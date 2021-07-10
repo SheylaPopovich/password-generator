@@ -79,8 +79,15 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
  
-
-  
-
-
 }
+
+
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+//the function is only called on the last line of script
+writePassword();
+
+
+prompt("Enter Password Criteria");
