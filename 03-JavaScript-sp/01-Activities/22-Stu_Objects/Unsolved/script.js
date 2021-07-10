@@ -11,9 +11,11 @@
 let customerOrder = {
     name: "Vanilla Latte ",
     sugar: 3,
-    ready: "false",
+    isReady: false,
 };
-console.log(customerOrder.name +  customerOrder.sugar)
-console.log(customerOrder.name + " Ready for pick-up")
-console.log(customerOrder.name + " Still in order queue")
 
+if (customerOrder.isReady === true) {
+    console.log("Ready for pick-up");
+} else{
+    console.log("Still in order qeue");
+}

@@ -1,4 +1,4 @@
-var chosenPet = "Lulu";
+var chosenPet = "Fluffy";
 
 var shelter = {
   dogs: ["Mackie", "Bernice", "Cookie Monster", "Spot"],
@@ -21,7 +21,7 @@ function catMessage() {
 
 if (shelter.dogs.includes(chosenPet)) {
   dogMessage();
-} else if (cats.includes(chosenPet)) {
+} else if (shelter.cats.includes(chosenPet)) {
   catMessage();
 } else {
   console.log("It looks like the pet is not available.");
