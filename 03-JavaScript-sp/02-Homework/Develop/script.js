@@ -21,7 +21,6 @@ let selectedPicks= [];
 let finalPassword= [];
 
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -44,13 +43,13 @@ function generatePassword(){
     alert("Mischievous behavior! Please type a password length.");
     return
 
-    } else{ alert("You have chosen your password length please follow the next prompts");
+    } else{ alert("You have chosen your password length please.");
     } 
 
 
     //used "confirm" method to return true boolean for "ok" and false boolean "cancel"
-    var answerUpper = confirm("Do you want uppercase letters in your password.");
-    var answerLower = confirm("Do you want lowercase letters in your password.");
+    var answerUpper = confirm("Do you want uppercase letters in your password?");
+    var answerLower = confirm("Do you want lowercase letters in your password?");
     var numberInput = confirm("Do you want numbers in your password?");
     var specialCharInput = confirm("Do you want special characters in your password?");
 
