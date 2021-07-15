@@ -17,3 +17,4 @@ console.log(d >= 0);
 console.log(expression1 && !expression2); //add not onto expression2
 console.log( expression1 || expression2); //remove not on expression1 
   
+console.log(typeof NaN)

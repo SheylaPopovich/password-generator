@@ -1,23 +1,18 @@
-console.log();
-var personName
-var pets
-var funFact
+let personName = "Sheyla Popovich";
 
-var personName = "Pop"; 
-var pets = 1;
-var funFact = "I love documentaries"
+console.log("My name is " + personName)
 
-console.log("My name is " + personName + ".");
-console.log("I have " + pets + " pets.");
-console.log("Fun fact: " + funFact);
+let pets = "1";
+console.log("I have " + pets + " pets.")
 
+let funFact = "I love to watch documentaries.";
 
+console.log("Fun Fact " + funFact)
 
 personName = "Stephanie";
-pets = 2;
-funFact = "I have none.";
 
+pets = 3;
 
-console.log("My name is " + personName + ".");
-console.log("I have " + pets + " pets.");
-console.log("Fun fact: " + funFact);
+funFact = "Im a dancer.";
+
+console.log(personName, pets, funFact)

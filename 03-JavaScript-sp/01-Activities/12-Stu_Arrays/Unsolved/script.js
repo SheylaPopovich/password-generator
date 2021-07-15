@@ -1,14 +1,14 @@
-let names= ["Sheyla", "John", "Tim"]
-console.log(names.length)
+studentName = ["Sheyla", " Stephanie", " Jamie", " Jace"];
+console.log(studentName.length)
 
 
+console.log("Welcome to the class " + studentName)
 
-console.log("Welcome to the class " + names[0]);
-console.log("Welcome to the class " + names[1]);
-console.log("Welcome to the class " + names[2]); 
+studentName [0] = "Tommy";
 
-names[0] = "Tiffany"
+console.log(studentName);
 
-if (names[0] =="Tiffany") {
-    console.log (names[0] + " is in class")
-}
+    if (studentName[0] === "Tommy"){
+     console.log(studentName[0] + " is in the class!");
+    }
+    

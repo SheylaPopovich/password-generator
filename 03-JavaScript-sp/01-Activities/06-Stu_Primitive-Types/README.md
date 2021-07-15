@@ -16,6 +16,15 @@ If you have completed this activity, work through the following challenge with y
 
 * There are two more primitive value types in JavaScript. Can you explain what `BigInt` and `Symbol` are?
 
+BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than 253-1. The largest number that JavaScript can reliably represent with the Number primitive is 253-1, which is represented by the MAX_SAFE_INTEGER constant. This has various uses where operations on large numbers are required.
+
+Syntax:
+
+BigInt( number ) 
+or
+Appending n to end of an integer literal
+
+
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---

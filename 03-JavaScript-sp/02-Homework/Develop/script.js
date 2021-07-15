@@ -1,146 +1,105 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//created arrays for each string of characters
+var special = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
+var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var lowerCased= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var upperCased = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+
+
+//created variables to store user's selections
 var passwordLength;
 var answerUpper;
 var numberInput;
 var specialCharInput;
+
+
+//created variables to produce output of generated password
 let userPick = [];
-
-//Generator functions
-function getRandomUpper(){
-  return String.fromCharCode(Math.floor(Math.random() * 26) +65);
-}
-
-function getRandomLower(){
-  return String.fromCharCode(Math.floor(Math.random() * 26) +97);
-}
-
-function getRandomNumber(){
-  return String.fromCharCode(Math.floor(Math.random() * 10) +48);
-}
-
-function getRandomSymbol(){
-  const symbols = "!#$%&()*+,-./:;=>?@[\^{|}~";
-  return symbols[Math.floor(Math.random() * symbols.length)];
-}
-
-//Testing random functions
-/*console.log(getRandomUpper());
-console.log(getRandomLower());
-console.log(getRandomNumber());
-console.log(getRandomSymbol());*/
-
-
-
-
-//Prompt options using if and else if statements
-function generatePassword(){
-    function chooseLength(){
-      passwordLength = prompt("Choose password length it must be a number between 8 to 128 characters long.");
-      
-     if(passwordLength < 8){
-      alert("Choose a length between 8 and 128 characters long test1");
-      chooseLength()
-
-      } else if(passwordLength > 128){
-      alert("Choose a length between 8 and 128 characters long test2");
-      chooseLength()
-
-      } else{ alert("You have chosen your password length please follow next prompts");
-      } 
-      return passwordLength;
-    }
-
-    chooseLength();
-
-    function chooseUpperCaseLtr(){
-      answerUpper = prompt("Do you want uppercase letters in your password. (Type Yes or No) Then click Ok.");
-
-      if(answerUpper  === "Yes" || answerUpper === "yes"){
-      alert("You selected Yes. Your password will include uppercase letters");
-      
-
-      } else if(answerUpper  === "No" || answerUpper  === "no"){
-      alert("You selected No. Your password will not include uppercase letters");
-      
-
-      } else{ alert("You rebel, you! Please type Yes or No.");
-      chooseUpperCaseLtr()
-      } 
-      return chooseUpperCaseLtr;
-    }
-
-    chooseUpperCaseLtr();
-
-    function chooseNumbers(){
-      numberInput = prompt("Do you want numbers in your password? (Type Yes or No)");
-    
-      if(numberInput === "Yes" || numberInput === "yes"){
-        alert ("Your password will consist of numeric characters. You will now be prompted to choose special characters");
-            
-      } else if (numberInput === "No" || numberInput === "no"){
-        alert("Your password will not consist of numeric characters. You will now be prompted to choose special characters");
-          
-      } else{ alert ("Mischievous behavior! Please type Yes or No.");
-      chooseNumbers()
-      } 
-      return chooseNumbers;
-    }
-    chooseNumbers();
-
-    const chooseSpecial = () => {
-      specialCharInput = prompt("Do you want special characters in your password?");
-    
-      if(specialCharInput === "Yes" || specialCharInput === "yes"){
-        alert ("Your password will consist of special characters.");
-              
-      } else if (specialCharInput === "No" || specialCharInput === "no"){
-        alert ("Your password will not consist of special characters.");
-
-      } else{ alert ("Mischievous behavior! Please type Yes or No.");
-      chooseSpecial()
-      }    
-      return chooseSpecial;
-    }
-    chooseSpecial();
-}
-
-generatePassword();
-
-
-for(var i=0; i <getRandomUpper.length; i++){
-  userPick.push(getRandomUpper[1]);
-}
-
-for(var i=0; i <getRandomLower.length; i++){
-  userPick.push(getRandomLower[1]);
-}
-
-for(var i=0; i <getRandomNumber.length; i++){
-  userPick.push(getRandomNumber[1]);
-}
-
-for(var i=0; i <getRandomSymbol.length; i++){
-  userPick.push(getRandomSymbol[1]);
-}
-
-var passwordResult = [];
-for(i=0; i < passwordResult; i++){
-  passwordResult.push(userPick[Math.floor(Math.random()* userPick.length)]);
-}
-
+let selectedPicks= [];
+let finalPassword= [];
 
 
 
 // Write password to the #password input
-  function writePassword() {
+function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
+
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+function generatePassword(){
+
+  //add "if"/ "else if" statements for a password length response initiated a prompt method
+  var passwordLength = prompt("Choose password length between 8 to 128 characters long.");
+  if(passwordLength < 8){
+    alert("Mischievous behavior! Please type a password length.");
+    return
+
+    } else if(passwordLength > 128){
+    alert("Mischievous behavior! Please type a password length.");
+    return
+
+    } else{ alert("You have chosen your password length please follow the next prompts");
+    } 
+
+
+    //used "confirm" method to return true boolean for "ok" and false boolean "cancel"
+    var answerUpper = confirm("Do you want uppercase letters in your password.");
+    var answerLower = confirm("Do you want lowercase letters in your password.");
+    var numberInput = confirm("Do you want numbers in your password?");
+    var specialCharInput = confirm("Do you want special characters in your password?");
+
+
+    //created an "if" conditional statement to perform an alert if conditions are all false 
+    if(answerUpper === false && answerLower === false && numberInput === false && specialCharInput === false){
+      alert("Choose a password criteria");
+      return
+    }
+
+
+    //created "if" conditional statements to execute functions that calls character arrays
+    if(answerUpper === true){
+      userPick = userPick.concat(upperCased)
+      selectedPicks.push(random(upperCased))
+    }
+    if(answerLower === true){
+      userPick = userPick.concat(lowerCased)
+      selectedPicks.push(random(lowerCased))
+    }
+    if(numberInput === true){
+      userPick = userPick.concat(numeric)
+      selectedPicks.push(random(numeric))
+    }
+    if(numberInput === true){
+      specialCharInput = userPick.concat(special)
+      selectedPicks.push(random(special))
+    }
+    //created "for loops" to execute functions to run until a certain condition is reached
+    for (let i = 0; i < passwordLength; i++) {
+      const element = passwordLength[i];
+      var character = random(userPick)
+      finalPassword.push(character)
+     }
+     for (let i = 0; i < selectedPicks.length; i++) {
+       const element = selectedPicks[i];
+       finalPassword[i] = selectedPicks[i]
+    }
+
+    //created a final password using ".join" method to create/return a new string by concatenating all of the elements in the array 
+    return finalPassword.join("")
+}
+
+  //created a function that will output a random generated password using "Math.floor" and "Math.random"
+  function random(array){
+    var index = Math.floor(Math.random()* array.length)
+    var randomElement = array[index]
+    return randomElement
+  }
+
+
+  generateBtn.addEventListener("click", writePassword);
