@@ -34,7 +34,7 @@ function writePassword() {
 function generatePassword(){
 
   //add "if"/ "else if" statements for a password length response initiated a prompt method
-  var passwordLength = prompt("Choose password length between 8 to 128 characters long.");
+  var passwordLength = prompt("Choose number between 8 to 128 for your password length.");
   if(passwordLength < 8){
     alert("Mischievous behavior! Please type a password length.");
     return
@@ -43,15 +43,15 @@ function generatePassword(){
     alert("Mischievous behavior! Please type a password length.");
     return
 
-    } else{ alert("You have chosen your password length please.");
+    } else{ alert("You have chosen your password length.");
     } 
 
 
     //used "confirm" method to return true boolean for "ok" and false boolean "cancel"
-    var answerUpper = confirm("Do you want uppercase letters in your password?");
-    var answerLower = confirm("Do you want lowercase letters in your password?");
-    var numberInput = confirm("Do you want numbers in your password?");
-    var specialCharInput = confirm("Do you want special characters in your password?");
+    var answerUpper = confirm("Do you want uppercase letters in your password? Click OK for yes and Cancel for no" );
+    var answerLower = confirm("Do you want lowercase letters in your password? Click OK for yes and Cancel for no");
+    var numberInput = confirm("Do you want numbers in your password? Click OK for yes and Cancel for no");
+    var specialCharInput = confirm("Do you want special characters in your password? Click OK for yes and Cancel for no");
 
 
     //created an "if" conditional statement to perform an alert if conditions are all false 
