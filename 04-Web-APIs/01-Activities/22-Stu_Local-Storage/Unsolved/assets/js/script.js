@@ -1,3 +1,11 @@
+/*It's done when Last Registered User displays the last email and password saved using localStorage, if it exists.
+
+It's done when, once the signUpButton is clicked, the email and password entered into the text boxes is saved using localStorage.
+
+It's done when the information under Last Registered User is updated to reflect the data stored using localStorage.*/
+
+
+
 var emailInput = document.querySelector("#email");
 var passwordInput = document.querySelector("#password");
 var signUpButton = document.querySelector("#sign-up");
@@ -13,7 +21,16 @@ function displayMessage(type, message) {
 }
 
 function renderLastRegistered() {
-  // TODO: Retrieve the last email and password and render it to the page
+  // first step!!!!!!!!!!!!     TODO: Retrieve the last email and password and render it to the page
+  let lastEmail = localStorage.getItem("email");
+  let lastPwd = localStorage.getItem("password");
+  
+  if(!email || !password){
+    return;
+  }
+    ////next step!!!!!!!!!!
+userEmailSpan.textContent = email;
+userPasswordSpan.textContent = password;
 }
 
 signUpButton.addEventListener("click", function(event) {
@@ -29,6 +46,11 @@ signUpButton.addEventListener("click", function(event) {
   } else {
     displayMessage("success", "Registered successfully");
 
-  // TODO: Save email and password to localStorage and render the last registered user
+  
+
+  // Second step!!!!!!!! TODO: Save email and password to localStorage and render the last registered user
+  localStorage.setItem("email", email)
+  localStorage.setItem("password", password)
+  renderLastRegistered();
   }
 });

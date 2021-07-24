@@ -6,12 +6,16 @@ var todoCountSpan = document.querySelector("#todo-count");
 var todos = [];
 
 // TODO: What is the purpose of this function?
+//creates a list aka li elements in HTML based on user inputs
+//A----- ITS GOING TO SHOW THE LIST
 function renderTodos() {
   // TODO: Describe the functionality of the following two lines of code.
+  //A------------- ITS GOING TO SHOW L
   todoList.innerHTML = "";
   todoCountSpan.textContent = todos.length;
   
   // TODO: Describe the functionality of the following `for` loop.
+  //loops over however many todos are added to the list
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
 
@@ -28,9 +32,15 @@ function renderTodos() {
 }
 
 // TODO: What is the purpose of the following function?
+//A particular init() function may be used to initialise the whole webpage,
 function init() {
+  
+  
   // TODO: What is the purpose of the following line of code?
+  // Use JSON.parse() to convert text to JavaScript object
+  //its going to take the string of todos and return it as an object
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
+  
   // TODO: Describe the functionality of the following `if` statement.
   if (storedTodos !== null) {
     todos = storedTodos;

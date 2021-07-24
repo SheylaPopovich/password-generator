@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* brand color palette */
+  :root {
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+   
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .hero-banner {
+    margin: 0;
+    padding: 0;
+      background-color: rgb(68, 88, 120);
+      background-size: cover;
+      background-position: center;
+      min-height: 30vh;
+      min-height: 30vh;
+      color: var(--light);
+      padding: 2% 6%;
+      display: flex;
+      justify-content: flex-end;
+      text-align: center;
+      align-items: center;
+
+  }
+
+  
