@@ -10,6 +10,7 @@ function getApi(request) {
       // Then write the conditional based on that response.status value
       // Make sure to display the response on the page
     })
+    if(responseStatus)
     .then(function (data) {
       console.log(data);
     });

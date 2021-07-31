@@ -20,8 +20,8 @@ To learn about how to use this API, check out the Requests section of the [Libra
 
 The homepage (`index.html`) should have the following:
 
-* A simple, well thought-out UI.
-
+* A simple, well thought-out UI. 
+ 
 * A form with a text input field to capture a search query and an option select dropdown to capture the format of the search query. The options in the dropdown should be a list of the possible format values listed in the [Library of Congress API documentation on requests](https://libraryofcongress.github.io/data-exploration/requests.html#format).
 
 * A browser event listener attached to the form to execute a function on submission, which will capture both form values and redirect the user to a search results page with those values included in the URL as query parameters. This will use the browser's `location.replace()` method.

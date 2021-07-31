@@ -54,6 +54,7 @@ The command `curl http://api.github.com` does not print any data to the command 
 1. Open a command-line window.
 
 2. Type `curl http://api.github.com`.
+answer: is it must have a "s" in the http url 
 
 3. Press the Enter key.
 
