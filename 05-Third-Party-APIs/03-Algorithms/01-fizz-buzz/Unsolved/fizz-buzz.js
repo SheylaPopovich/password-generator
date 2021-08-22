@@ -6,16 +6,17 @@
 
 const numbers = [1,2,3,4,5]
 
+
 var fizzBuzz = function (arr) {
 // console.log(arr)
-
-
 
 
 for (let index = 0; index < arr.length; index++){
     if (arr[index] % 3 === 0) {
         console.log("Fizz");
     } else if (arr[index] % 5 === 0)
+
+fizzBuzz(numbers)
 }
 }
 
@@ -31,7 +32,6 @@ for (let index = 0; index < arr.length; index++){
 // else 
 // };
 
-fizzBuzz(numbers)
 
 
 
