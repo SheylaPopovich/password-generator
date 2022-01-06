@@ -51,7 +51,7 @@ function generatePassword(){
     var answerUpper = confirm("Do you want UPPERCASE letters in your password? Click OK for yes and Cancel for no" );
     var answerLower = confirm("Do you want lowercase letters in your password? Click OK for yes and Cancel for no");
     var numberInput = confirm("Do you want numbers in your password? Click OK for yes and Cancel for no");
-    var specialCharInput = confirm("Do you want special characters in your password? Click OK for yes and Cancel for no");
+    var specialCharInput = confirm("Do you want special characters $%^&* in your password? Click OK for yes and Cancel for no");
 
 
     //created an "if" conditional statement to perform an alert if conditions are all false 
