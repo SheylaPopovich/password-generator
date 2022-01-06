@@ -48,7 +48,7 @@ function generatePassword(){
 
 
     //used "confirm" method to return true boolean for "ok" and false boolean "cancel"
-    var answerUpper = confirm("Do you want uppercase letters in your password? Click OK for yes and Cancel for no" );
+    var answerUpper = confirm("Do you want UPPERCASE letters in your password? Click OK for yes and Cancel for no" );
     var answerLower = confirm("Do you want lowercase letters in your password? Click OK for yes and Cancel for no");
     var numberInput = confirm("Do you want numbers in your password? Click OK for yes and Cancel for no");
     var specialCharInput = confirm("Do you want special characters in your password? Click OK for yes and Cancel for no");
