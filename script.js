@@ -40,7 +40,7 @@ function generatePassword(){
     return
 
     } else if(passwordLength > 128){
-    alert("Mischievous behavior! Please type a password length.");
+    alert("Oh no! Please type a password length.");
     return
 
     } else{ alert("You have chosen your password length.");
