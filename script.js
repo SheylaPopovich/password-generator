@@ -36,7 +36,7 @@ function generatePassword(){
   //add "if"/ "else if" statements for a password length response initiated a prompt method
   var passwordLength = prompt("Choose number between 8 to 128 for your password length.");
   if(passwordLength < 8){
-    alert("Mischievous behavior! Please type a password length.");
+    alert("Oh no! Please type a password length.");
     return
 
     } else if(passwordLength > 128){
